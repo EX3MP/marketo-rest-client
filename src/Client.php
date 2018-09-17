@@ -1167,6 +1167,22 @@ class Client extends GuzzleClient
         return $this->getResult('getPrograms', $args, false, $returnRaw);
     }
 
+
+    /**
+     * GET Program by id
+     *
+     * @param int   $id
+     * @param array $args
+     *
+     * @return Response
+     */
+    public function getProgram($id, $args = array(), $returnRaw = false)
+    {
+        $args['id'] = $id;
+
+        return $this->getResult('getProgram', $args, false, $returnRaw);
+    }
+
     /**
      * GET Channels
      *

@@ -455,6 +455,14 @@
 			"responseModel": "baseResponse",
 			"responseClass": "CSD\\Marketo\\Response"
 		},
+		"getProgram": {
+			"httpMethod": "GET",
+			"uri": "/rest/asset/v1/program/{id}.json",
+			"parameters": {
+                "id": {"location": "uri"}
+            },
+			"responseClass": "CSD\\Marketo\\Response"
+		},
 		"getPrograms": {
 			"httpMethod": "GET",
 			"uri": "/rest/asset/v1/programs.json",
