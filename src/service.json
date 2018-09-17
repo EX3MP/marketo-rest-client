@@ -488,6 +488,25 @@
 			},
 			"responseClass": "CSD\\Marketo\\Response"
 		},
+		"getLeadsByProgram": {
+			"httpMethod": "GET",
+			"uri": "/rest/v1/leads/programs/{programId}.json",
+			"parameters": {
+				"programId": {
+					"location": "uri"
+				},
+				"batchSize": {
+					"location": "query"
+				},
+				"nextPageToken": {
+					"location": "query"
+				},
+				"fields": {
+					"location": "query"
+				}
+			},
+			"responseClass": "CSD\\Marketo\\Response\\GetLeadsResponse"
+		},
 		"getChannels": {
 			"httpMethod": "GET",
 			"uri": "/rest/asset/v1/channels.json",

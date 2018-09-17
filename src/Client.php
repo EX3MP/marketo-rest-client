@@ -595,6 +595,24 @@ class Client extends GuzzleClient
     }
 
     /**
+     * Get multiple leads by Program ID.
+     *
+     * @param int $programId
+     * @param array $args
+     * @param bool $returnRaw
+     *
+     * @link http://developers.marketo.com/rest-api/endpoint-reference/lead-database-endpoint-reference/#/Leads/getLeadsByProgramIdUsingGET
+     *
+     * @return GetLeadsResponse
+     */
+    public function getLeadsByProgram($programId, $args = array(), $returnRaw = false)
+    {
+        $args['programId'] = $programId;
+
+        return $this->getResult('getLeadsByProgram', $args, false, $returnRaw);
+    }
+
+    /**
      * Get a lead by ID.
      *
      * @param int $id
